@@ -1,0 +1,8 @@
+prefix=/home/klf/ros_ws/opencv_test/devel
+
+Name: cv_test
+Description: Description of cv_test
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: cv_bridge image_transport roscpp rospy sensor_msgs std_msgs

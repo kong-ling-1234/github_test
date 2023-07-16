@@ -1,0 +1,28 @@
+
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build", // A task for building your package
+            "type": "shell",
+            "command": "catkin_make", // use catkin build if you're using catkin tools
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "run", // A task for running your node
+            "type": "shell",
+            "command": "rosrun cv_test image_listener_node",
+            "dependsOn": ["build"], // this task will run after the build task
+            "group": "test",
+            "presentation": {
+                "reveal": "always"
+            }
+        }
+    ]
+}
